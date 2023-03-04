@@ -65,7 +65,7 @@ public class MQTTEventListenerProvider implements EventListenerProvider {
 
     public  void _processEvent(String  jsonUser, String jsonEvent, String topic) throws JsonProcessingException {
 
-        String stringMessageDto = String.format("\"event\":\"%s\",\"user\":\"%s\"", jsonEvent, jsonUser);
+        String stringMessageDto = String.format("{\"event\":%s,\"user\":%s}", jsonEvent, jsonUser);
         log.debug("Sending message: {}", stringMessageDto);
         MqttMessage payload = toPayload(stringMessageDto);
         try {

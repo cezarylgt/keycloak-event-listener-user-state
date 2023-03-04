@@ -16,13 +16,13 @@ public class JsonSerializer {
 
         return gson.toJson(object);
     }
-
-    public static String toJsonString(AdminEvent event) {
-        JsonObject json = gson.toJsonTree(event).getAsJsonObject();
-        Object parsed = gson.fromJson(event.getRepresentation(), Object.class);
-        json.add("representation", gson.toJsonTree(parsed));
-        return gson.toJson(json);
-
-    }
+    // disabled
+//    public static String toJsonString(AdminEvent event) {
+//        JsonObject json = gson.toJsonTree(event).getAsJsonObject();
+//        Object parsed = gson.fromJson(event.getRepresentation(), Object.class);
+//        json.add("representation", gson.toJsonTree(parsed));
+//        return gson.toJson(json);
+//
+//    }
 
 }

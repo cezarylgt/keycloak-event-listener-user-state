@@ -38,7 +38,9 @@ class JsonSerializerTest {
         assertTrue(result.contains("\"resourceType\":\"USER\""));
         assertTrue(result.contains("\"operationType\":\"UPDATE\""));
         assertTrue(result.contains("\"resourcePath\":\"users/ca3c0b9e-afd5-40b9-a8ff-c981110ecaed\""));
-        assertTrue(result.contains("\"representation\":" + event.getRepresentation()));
+        assertTrue(result.contains("\"representation\":\"{\\\"username\\\":\\\"player1"));
+
+
 
     }
 
